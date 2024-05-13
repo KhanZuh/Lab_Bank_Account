@@ -5,7 +5,8 @@ public class BankAccount {
     private String accountNumber;
     private double balance;
 
-    public BankAccount (String firstName, String lastName, String dateOfBirth, String accountNumber) {
+    //    Here we write the constructor
+    public BankAccount(String firstName, String lastName, String dateOfBirth, String accountNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
@@ -13,7 +14,7 @@ public class BankAccount {
         this.balance = 0.0; // Balance starts at 0
     }
 
-//  Access modifiers - Getters
+    //  Access modifiers - Getters
     public String getFirstName() {
         return firstName;
     }
@@ -34,7 +35,7 @@ public class BankAccount {
         return balance;
     }
 
-//  Access modifiers - Setters
+    //  Access modifiers - Setters
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -54,5 +55,17 @@ public class BankAccount {
     public void setBalance(double balance) {
         this.balance = balance;
     }
+
+    //    withdrawal and deposit methods
+    public void deposit(double amount) {
+        this.balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        this.balance -= amount;
+    }
+
+//    Interest extension
+
 
 }
